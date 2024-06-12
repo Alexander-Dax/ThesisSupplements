@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAMARIN_VER="1.8.0"
+TAMARIN_VER="thesis-alex"
 
 WORK_DIR_NAME=$(basename $PWD)
 
