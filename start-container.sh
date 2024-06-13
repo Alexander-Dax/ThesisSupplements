@@ -10,7 +10,7 @@ else
   port="$1"
 fi
 
-podman run -it \
+podman run --privileged -it \
   -v "$PWD":/home/user/"$WORK_DIR_NAME" \
   --userns keep-id \
   --workdir /home/user/"$WORK_DIR_NAME" \
