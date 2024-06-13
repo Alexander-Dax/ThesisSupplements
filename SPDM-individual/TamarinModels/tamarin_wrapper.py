@@ -35,7 +35,7 @@ def create_commands(model, executable, ram, cores, lemmas, preprocess_flags, tam
             preprocess_flags_string += '-D=%s ' % ffl
     lemma_strings = []
     for lemma in lemmas:
-        lemma_strings.append('--prove=%s --derivcheck=0' % lemma)
+        lemma_strings.append('--prove=%s --derivcheck=0 ' % lemma)
     for lemma_s in lemma_strings:
         command = prefix + lemma_s + infix + preprocess_flags_string + tam
         finished_commands.append((model, command, lemma_s.split("=")[1]))
