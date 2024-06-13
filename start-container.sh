@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAMARIN_VER="1.8.0"
+TAMARIN_VER="thesis-alex"
 
 WORK_DIR_NAME=$(basename $PWD)
 
@@ -10,7 +10,7 @@ else
   port="$1"
 fi
 
-podman run -it \
+podman run --privileged -it \
   -v "$PWD":/home/user/"$WORK_DIR_NAME" \
   --userns keep-id \
   --workdir /home/user/"$WORK_DIR_NAME" \

@@ -10,12 +10,14 @@ WORKDIR /root
 RUN apt-get update --yes
 RUN apt-get install --yes wget
 RUN apt-get install --yes libz-dev
+RUN apt-get install --yes build-essential
 RUN apt-get install --yes maude
 RUN apt-get install --yes haskell-stack
+RUN apt-get install --yes haskell-platform
 RUN apt-get install --yes locales
 RUN apt-get install --yes netbase
-RUN stack upgrade
 RUN locale-gen "en_US.UTF-8"
+RUN stack upgrade
 RUN useradd -ms /bin/bash user
 USER user
 WORKDIR /home/user
