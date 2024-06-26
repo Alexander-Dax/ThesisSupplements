@@ -16,6 +16,7 @@ RUN apt-get install --yes haskell-stack
 RUN apt-get install --yes haskell-platform
 RUN apt-get install --yes locales
 RUN apt-get install --yes netbase
+RUN apt-get install --yes core-utils
 RUN locale-gen "en_US.UTF-8"
 RUN stack upgrade
 RUN useradd -ms /bin/bash user
@@ -27,7 +28,6 @@ RUN rm ${TAG}.tar.gz
 WORKDIR /home/user/tamarin-prover-cj-${TAG}
 RUN stack setup
 RUN stack install
-RUN bash -c 'if [[ ${TAG} == "1.6.1" || ${TAG} == "1.4.1" ]]; then make sapic; fi'
 ENV PATH="/home/user/.local/bin":${PATH}
 WORKDIR /home/user
 RUN rm -r /home/user/tamarin-prover-cj-${TAG}
