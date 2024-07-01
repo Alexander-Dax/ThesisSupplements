@@ -681,7 +681,7 @@ lemma secret_major_resp_side[use_induction]:
 
 
 // Falsified: Attack Trace
-lemma mutual_authentication[use_induction]:
+lemma mutual_authentication[use_induction,heuristic=C]:
 " (All sid1 tid1 oidI oidR secret transcript role #j.  
     CommitMutAuth(sid1, tid1, oidI, oidR, secret, transcript, role) @j 
     ==> (Ex sid2 tid2 role2 #t. t<j &
