@@ -16,7 +16,7 @@ RUN apt-get install --yes haskell-stack
 RUN apt-get install --yes haskell-platform
 RUN apt-get install --yes locales
 RUN apt-get install --yes netbase
-RUN apt-get install --yes core-utils
+RUN apt-get install --yes coreutils
 RUN locale-gen "en_US.UTF-8"
 RUN stack upgrade
 RUN useradd -ms /bin/bash user
