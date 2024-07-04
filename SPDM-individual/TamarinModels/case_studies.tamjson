@@ -9,21 +9,21 @@
                 "preshared_pk_copy.spthy",
                 "key_exchange.spthy"],
     "device_attestation.spthy" : {
-      "preprocess_flags" : ["Sanity"]
+      "preprocess_flags" : []
       },
     "attack_refl_preshared_psk.spthy" : {
       "preprocess_flags" : []
       },
     "preshared_psk.spthy" : {
-      "preprocess_flags" : ["Sanity"]
+      "preprocess_flags" : []
       },
     "preshared_pk.spthy" : {
-      "preprocess_flags" : ["auth","Sanity"]
+      "preprocess_flags" : ["auth"]
       },
     "preshared_pk_copy.spthy" : {
       "preprocess_flags" : ["fs"]
       },
     "key_exchange.spthy" : {
-      "preprocess_flags" : ["Sanity"]
+      "preprocess_flags" : []
       }
 }

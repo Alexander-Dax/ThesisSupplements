@@ -2838,7 +2838,7 @@ All tidI oidI oidR pkR sig #i.
 *
 *****************************************/
 // Reachability of Certificate RESP
-lemma MeasurementSanityCheck[heuristic=S]: exists-trace
+lemma MeasurementSanityCheck[heuristic=C]: exists-trace
   "Ex tid oid oidR pkR sig ltk digest cert #i0 #i1 #i2 #i3 #i4.
   Attacker(oidR, ltk, pkR)@i0
   & ReqStartProt(tid, oid, oidR)@#i1
