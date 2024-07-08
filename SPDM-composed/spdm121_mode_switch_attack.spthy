@@ -98,26 +98,24 @@ rule CreateRootCert[color= F9C74F]:
 
 rule createDevice:
     let
-       V = <v1, v2>
-       A = <a1, a2>
+       V = v1
+       A = a1
        C = capabilities
     in
     [ Fr(~oid),
       In(capabilities),
       Fr(~measure),
-      In(<v1, v2>),
-      In(<a1, a2>)]
+      In(v1),
+      In(a1)]
   --[ IsValidVersion(v1),
-      IsValidVersion(v2),
-      IsValidAlgo(a1),
-      IsValidAlgo(a2)]->
+      IsValidAlgo(a1)]->
     [ !Device(~oid, V, C, A),
       !Measurement(~oid, ~measure),
       Out(~oid) ]
 
 
 rule sharePSK:
-    [ !Device(~oid1,V1,'PSK' + C1,A1), !Device(~oid2,V2,'PSK' + C2,A2), Fr(~key) ]
+    [ !Device(~oid1,V1,C1,A1), !Device(~oid2,V2,C2,A2), Fr(~key) ]
   --[ OneSharePSK(~oid1,~oid2), OneSharePSK(~oid2,~oid1), ]->
     [ !PSK(~oid1,~oid2,~key) ]
 
