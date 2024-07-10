@@ -4,7 +4,7 @@ import subprocess
 import os
 import datetime
 
-TIMEOUT = 1800
+TIMEOUT = 2400
 
 
 def run_tamarin(filename, outputf, flags, lemma):

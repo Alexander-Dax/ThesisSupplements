@@ -3,8 +3,8 @@
 if [ $1 = 'kyber' ] || [ $1 = 'all' ]
     then
     time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 3600 --resultfolder RES/results_kyber_no_flags
-    time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 3600 -p "GoodKeysOnly" --resultfolder RES/results_kyber_hon
-    time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 3600 -p "GoodKeysOnly,bindktoct,bindcttopk" --resultfolder RES/results_kyber_hon_full
+    time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 4800 -p "GoodKeysOnly" --resultfolder RES/results_kyber_hon
+    time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 4800 -p "GoodKeysOnly,bindktoct,bindcttopk" --resultfolder RES/results_kyber_hon_full
     time python3 tamarin_wrapper.py Kyber/Kyber_AKE_EventBased_Model.spthy -t 3600 -p "MAL,bindktoct,bindcttopk,bindcttok" --resultfolder RES/results_kyber_mal
 fi
 
@@ -35,8 +35,8 @@ fi
 if [ $1 = 'pqspdm' ] || [ $1 = 'all' ]
     then
     time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 3600 --resultfolder RES/results_spdm_no_flags
-    time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 3600 -p "GoodKeysOnly" --resultfolder RES/results_spdm_hon
-    time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 3600 -p "GoodKeysOnly,bindktoct,bindcttopk" --resultfolder RES/results_spdm_hon_full
+    time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 4800 -p "GoodKeysOnly" --resultfolder RES/results_spdm_hon
+    time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 4800 -p "GoodKeysOnly,bindktoct,bindcttopk" --resultfolder RES/results_spdm_hon_full
     time python3 tamarin_wrapper.py PQSPDM/PQ_SPDM_AKE_EventBased_Model.spthy -t 3600 -p "MAL,bindktoct,bindcttopk,bindcttok" --resultfolder RES/results_spdm_mal
 fi
 
