@@ -1,0 +1,4 @@
+versiontypes --derivcheck,True,6.001094579696655,31,[]
+secret_major_init_side --derivcheck,True,9.54394268989563,22,[]
+secret_major_resp_side --derivcheck,True,9.543824434280396,22,[]
+mutual_authentication --derivcheck,timeout,1200.1016438007355,-1,[]
