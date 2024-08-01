@@ -568,7 +568,7 @@ def getManager():
 
 default_cores = min(os.cpu_count(),8)
 
-default_prover = "tamarin-concat"
+default_prover = "tamarin-prover"
 default_timeout = 30 # in seconds
 
 simplifier_params = ["SingleHash", "FixedLength"]

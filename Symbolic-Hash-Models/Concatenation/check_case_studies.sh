@@ -36,9 +36,9 @@ time ./auto_paper.py IKE/IKE_Cookie/ikeV2_HEB_A.spthy -l trans_auth secrecy_key_
 
 #IKE (with neutral DH element)
 # 1m25
-time ./auto_paper.py IKE/IKE_Cookie/ikeV2_HEB_A.spthy -l trans_auth secrecy_key_A secrecy_key_B -fs res-ike-neutral -c 2 -p "tamarin-concat -D=neutral" > TIMED_RESULTS/IKE_neutral.results;
+time ./auto_paper.py IKE/IKE_Cookie/ikeV2_HEB_A.spthy -l trans_auth secrecy_key_A secrecy_key_B -fs res-ike-neutral -c 2 -p "tamarin-prover -D=neutral" > TIMED_RESULTS/IKE_neutral.results;
 
 
 # IKE (no cookie, with neutral)
 # 2m12
-time ./auto_paper.py IKE/IKE_NoCookie/ikeV2_HEB_A.spthy -l trans_auth secrecy_key_A secrecy_key_B -fs res-ike-nocookie-neutral -c 2 -p "tamarin-concat -D=neutral" > TIMED_RESULTS/IKE_neutral_nocookie.results;
+time ./auto_paper.py IKE/IKE_NoCookie/ikeV2_HEB_A.spthy -l trans_auth secrecy_key_A secrecy_key_B -fs res-ike-nocookie-neutral -c 2 -p "tamarin-prover -D=neutral" > TIMED_RESULTS/IKE_neutral_nocookie.results;
